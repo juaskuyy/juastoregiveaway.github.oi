@@ -4,594 +4,70 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🐨 JuaStore Giveaway Premium</title>
+<title>🐨 JuaStore Giveaway</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+</head>
 
-body{
-    background:#050510;
-    color:white;
-    padding:20px;
-}
-
-
-/* LOGO */
-
-.logo{
-    text-align:center;
-}
-
-.logo img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    border:3px solid #00ffff;
-    box-shadow:
-    0 0 20px #00ffff,
-    0 0 40px #ff00ff;
-}
-
-
-/* TITLE */
-
-.title{
-    text-align:center;
-    margin-top:15px;
-}
-
-
-.title h1{
-    font-size:32px;
-    animation:rgb 1s infinite alternate;
-}
-
-
-.title p{
-    color:#ddd;
-    margin-top:8px;
-}
-
-
-@keyframes rgb{
-
-0%{
-color:#ff00aa;
-text-shadow:
-0 0 10px #ff00aa,
-0 0 25px #ff00aa;
-}
-
-
-50%{
-color:#00ffff;
-text-shadow:
-0 0 10px #00ffff,
-0 0 25px #00ffff;
-}
-
-
-100%{
-color:#00ff66;
-text-shadow:
-0 0 10px #00ff66,
-0 0 25px #00ff66;
-}
-
-}
-
-
-/* CARD */
-
-.card{
-
-max-width:700px;
-margin:25px auto;
-background:#111;
-
-border:2px solid #00ffff;
-border-radius:25px;
-
-padding:25px;
-
-box-shadow:
-0 0 20px #00ffff;
-
-}
-
-
-.card h2{
-
-text-align:center;
-margin-bottom:15px;
-font-size:28px;
-
-animation:rgb 1s infinite alternate;
-
-}
-
-
-.info{
-
-font-size:18px;
-line-height:1.8;
-
-}
-
-
-.status{
-
-color:#00ff66;
-font-weight:bold;
-
-}
-
-
-.sold{
-
-color:red;
-font-weight:bold;
-
-}
-
-
-/* BUTTON */
-
-button{
-
-width:100%;
-
-padding:15px;
-
-margin-top:15px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:18px;
-
-font-weight:bold;
-
-background:#ff00aa;
-
-color:white;
-
-cursor:pointer;
-
-box-shadow:
-0 0 15px #ff00aa;
-
-}
-
-
-button:hover{
-
-background:#00ffff;
-
-color:black;
-
-}
-
-
-/* FOOTER */
-
-.footer{
-
-text-align:center;
-margin-top:30px;
-color:#aaa;
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-
-.title h1{
-font-size:25px;
-}
-
-
-.card h2{
-font-size:22px;
-}
-
-
-.info{
-font-size:16px;
-}
-
-
-}
-
-</style>
 <body>
 
-
-<!-- LOGO JUASTORE -->
+<div class="header">
 
 <div class="logo">
-
-<img src="logo.png" alt="Logo JuaStore">
-
+🐨
 </div>
 
-
-<!-- TITLE -->
-
-<div class="title">
-
 <h1>
-🐨 JUASTORE GIVEAWAY 🐨
+JUASTORE GIVEAWAY
 </h1>
 
 <p>
-🎁 Claim Premium Account Gratis Setiap Hari 🎁
+🎁 Claim Premium Account Gratis Setiap Hari
 </p>
 
 </div>
 
 
-<!-- LIST GIVEAWAY -->
+<div class="info-box">
 
-<div id="listAkun">
+🔥 Total Produk:
+<span id="totalProduk">
+Loading...
+</span>
+
+</div>
 
 
-<!-- Canva -->
+<div id="produk">
 
-<div class="card">
+<!-- Produk dari Firebase akan muncul di sini -->
+
+</div>
+
+
+<div id="popup" class="popup">
+
+<div class="popup-box">
 
 <h2>
-🎨 Canva Lifetime
+🎉 CLAIM BERHASIL
 </h2>
 
-
-<div class="info">
-
-Status:
-<span class="status" id="status-canva">
-READY
-</span>
-
-<br>
-
-Stok:
-<span id="stok-canva">
-5
-</span>
-
-
-<br><br>
-
-<div id="detail-canva">
-
-🔒 Link Invite tersembunyi
-<br>
-Claim untuk melihat link
+<div id="detailAkun">
 
 </div>
 
-
-<button onclick="claim('canva')">
-
-🎁 CLAIM SEKARANG
-
+<button onclick="tutupPopup()">
+Tutup
 </button>
 
-
 </div>
 
 </div>
 
 
-
-<!-- Scribd 1 -->
-
-
-<div class="card">
-
-
-<h2>
-📚 Scribd Premium #1
-</h2>
-
-
-<div class="info">
-
-
-Status:
-<span class="status" id="status-scribd">
-READY
-</span>
-
-
-<br>
-
-
-Stok:
-<span id="stok-scribd">
-1
-</span>
-
-
-<br><br>
-
-
-<div id="detail-scribd">
-
-🔒 Email & Password tersembunyi
-
-</div>
-
-
-<button onclick="claim('scribd')">
-
-🎁 CLAIM SEKARANG
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- Scribd 2 -->
-
-
-<div class="card">
-
-
-<h2>
-📖 Scribd Premium #2
-</h2>
-
-
-<div class="info">
-
-
-Status:
-<span class="status" id="status-scribd2">
-READY
-</span>
-
-
-<br>
-
-
-Stok:
-<span id="stok-scribd2">
-1
-</span>
-
-
-<br><br>
-
-
-<div id="detail-scribd2">
-
-🔒 Email & Password tersembunyi
-
-</div>
-
-
-<button onclick="claim('scribd2')">
-
-🎁 CLAIM SEKARANG
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-<!-- FOOTER -->
-
-
-<div class="footer">
-
-🐨 JuaStore <br>
-Top Up Game • Premium Apps • Digital Product
-
-</div>
-<!-- FIREBASE SCRIPT -->
-
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
-getDatabase,
-ref,
-get,
-update
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-
-
-
-// KONFIGURASI FIREBASE JUASTORE
-
-
-const firebaseConfig = {
-
-apiKey: "AIzaSyC5yGP6DEjbTPTfGXtBYGF-FuFDWSLu1M8",
-
-authDomain: "juastore-giveaway-a7bd4.firebaseapp.com",
-
-databaseURL:
-"https://juastore-giveaway-a7bd4-default-rtdb.asia-southeast1.firebasedatabase.app",
-
-projectId:
-"juastore-giveaway-a7bd4",
-
-storageBucket:
-"juastore-giveaway-a7bd4.firebasestorage.app",
-
-messagingSenderId:
-"449734844473",
-
-appId:
-"1:449734844473:web:5dcdff3c22d8d1b8daede8"
-
-};
-
-
-// INISIALISASI
-
-
-const app = initializeApp(firebaseConfig);
-
-const db = getDatabase(app);
-
-
-
-// FUNGSI CLAIM
-
-
-window.claim = async function(namaAkun){
-
-
-let akunRef = ref(db, namaAkun);
-
-
-let snapshot = await get(akunRef);
-
-
-if(!snapshot.exists()){
-
-alert("Data tidak ditemukan!");
-
-return;
-
-}
-
-
-let data = snapshot.val();
-
-
-// CEK STOK
-
-
-if(data.stok <= 0){
-
-alert("❌ Maaf, akun sudah SOLD OUT");
-
-return;
-
-}
-
-
-// KURANGI STOK
-
-
-let sisa = data.stok - 1;
-
-
-let status = sisa == 0 ? "sold out" : "ready";
-
-
-await update(akunRef, {
-
-stok: sisa,
-
-status: status
-
-});
-
-
-
-// TAMPILKAN DETAIL
-
-
-let detail = "";
-
-
-if(data.link){
-
-detail =
-"🔗 Link Invite:<br><br>" +
-data.link;
-
-}
-
-else{
-
-detail =
-"📧 Email: " +
-data.email +
-"<br><br>🔑 Password: " +
-data.password;
-
-}
-
-
-// CANVA
-
-
-let id = namaAkun;
-
-
-
-
-
-document.getElementById(
-"detail-" + id
-).innerHTML =
-"🎉 CLAIM BERHASIL<br><br>" +
-detail;
-
-
-
-document.getElementById(
-"stok-" + id
-).innerHTML = sisa;
-
-
-// SOLD OUT
-
-
-if(sisa == 0){
-
-document.getElementById(
-"status-" + id
-).innerHTML =
-"❌ SOLD OUT";
-
-
-document.getElementById(
-"status-" + id
-).className =
-"sold";
-
-}
-
-
-alert(
-"🎁 Selamat! Akun berhasil di-claim"
-);
-
-
-};
-
-</script>
-
+<script type="module" src="script.js"></script>
 
 </body>
 
