@@ -1,0 +1,231 @@
+{
+  "produk": {
+    "canva": {
+      "nama": "Canva Lifetime",
+      "status": "ready",
+      "stok": 5,
+      "tipe": "invite",
+      "akun": {
+        "1": {
+          "link": "https://www.canva.com/brand/join?token=wleiCumvd5ab1DeA42Gy-g&brandingVariant=edu&referrer=team-invite"
+        },
+        "2": {
+          "link": "https://www.canva.com/brand/join?token=wleiCumvd5ab1DeA42Gy-g&brandingVariant=edu&referrer=team-invite"
+        },
+        "3": {
+          "link": "https://www.canva.com/brand/join?token=wleiCumvd5ab1DeA42Gy-g&brandingVariant=edu&referrer=team-invite"
+        },
+        "4": {
+          "link": "https://www.canva.com/brand/join?token=wleiCumvd5ab1DeA42Gy-g&brandingVariant=edu&referrer=team-invite"
+        },
+        "5": {
+          "link": "https://www.canva.com/brand/join?token=wleiCumvd5ab1DeA42Gy-g&brandingVariant=edu&referrer=team-invite"
+        }
+      }
+    },
+
+    "scribd": {
+      "nama": "Scribd Premium",
+      "status": "ready",
+      "stok": 5,
+      "tipe": "login",
+      "akun": {
+        "1": {
+          "email": "lahunate584@gmaail.id",
+          "password": "Juastore.2025"
+        },
+        "2": {
+          "email": "bitotinu321@gmaail.id",
+          "password": "Juastore.2025"
+        },
+        "3": {
+          "email": "hoxagiqe307@gmaail.id",
+          "password": "Juastore.2025"
+        },
+        "4": {
+          "email": "xowuzawa255@gmaail.id",
+          "password": "Juastore.2025"
+        },
+        "5": {
+          "email": "misake93@gmaail.id",
+          "password": "Juastore.2025"
+        }
+      }
+    },
+
+    "vidio": {
+      "nama": "Vidio Platinum TV 1 Tahun",
+      "status": "ready",
+      "stok": 4,
+      "tipe": "login",
+      "akun": {
+        "1": {
+          "email": "putigastisalahudinsgz934@gmail.com",
+          "password": "malesbanget"
+        },
+        "2": {
+          "email": "kayunwacana945@gmail.com",
+          "password": "niveachan"
+        },
+        "3": {
+          "email": "dinamaryati688@gmail.com",
+          "password": "niveachan"
+        },
+        "4": {
+          "email": "rusmanprayoga8@gmail.com",
+          "password": "niveachan"
+        }
+      }
+    },
+
+    "viu": {
+      "nama": "VIU Lifetime",
+      "status": "ready",
+      "stok": 10,
+      "tipe": "login",
+      "akun": {
+        "1": {
+          "email": "6282329392248",
+          "password": "donal12345"
+        },
+        "2": {
+          "email": "6281182032567",
+          "password": "donal12345"
+        },
+        "3": {
+          "email": "6288076324697",
+          "password": "donal12345"
+        },
+        "4": {
+          "email": "6286466401190",
+          "password": "donal12345"
+        },
+        "5": {
+          "email": "6282267108903",
+          "password": "donal12345"
+        },
+        "6": {
+          "email": "6285165490118",
+          "password": "donal12345"
+        },
+        "7": {
+          "email": "6285459224802",
+          "password": "donal12345"
+        },
+        "8": {
+          "email": "628299614653",
+          "password": "donal12345"
+        },
+        "9": {
+          "email": "6283605220192",
+          "password": "donal12345"
+        },
+        "10": {
+          "email": "6288733714398",
+          "password": "donal12345"
+        }
+      }
+    },
+
+    "alightmotion": {
+      "nama": "Alight Motion Premium",
+      "status": "ready",
+      "stok": 3,
+      "tipe": "login",
+      "akun": {
+        "1": {
+          "email": "webbo79@sentimentdate.com",
+          "password": "akses buka https://generator.email/webbo79@sentimentdate.com"
+        },
+        "2": {
+          "email": "tumoxatt@naverapp.com",
+          "password": "akses buka https://generator.email/tumoxatt@naverapp.com"
+        },
+        "3": {
+          "email": "genalex5@vastorestaurante.net",
+          "password": "akses buka https://generator.email/genalex5@vastorestaurante.net"
+        }
+      }
+    },
+
+    "youtube": {
+      "nama": "YouTube Premium",
+      "status": "ready",
+      "stok": 2,
+      "tipe": "invite",
+      "akun": {
+        "1": {
+          "link": "https://accounts.google.com/AccountChooser?continue=https://families.google.com/lifecycle/flows/linking/superviseeaccept/edrDKqlFybXCHdYqO6QjFzJKsvy1iA?pir%3DCAQQAQ"
+        },
+        "2": {
+          "link": "https://accounts.google.com/AccountChooser?continue=https://families.google.com/lifecycle/flows/linking/superviseeaccept/edrDKqlFybXCHdYqO6QjFzJKsvy1iA?pir%3DCAQQAQ"
+        }
+      }
+    },
+
+    "duolingo": {
+      "nama": "Duolingo Super 1 Bulan",
+      "status": "ready",
+      "stok": 14,
+      "tipe": "login",
+      "akun": {
+        "1": {
+          "email": "7j46eswds1@jarsora.id",
+          "password": "Masuk123"
+        },
+        "2": {
+          "email": "kmxm859e19@jarsora.id",
+          "password": "Masuk123"
+        },
+        "3": {
+          "email": "2fgfpn43hv@jarsora.id",
+          "password": "Masuk123"
+        },
+        "4": {
+          "email": "3fafydj2ur@jarsora.id",
+          "password": "Masuk123"
+        },
+        "5": {
+          "email": "snf0wse6kk@jarsora.id",
+          "password": "Masuk123"
+        },
+        "6": {
+          "email": "amhixy6tv3@jarsora.id",
+          "password": "Masuk123"
+        },
+        "7": {
+          "email": "709b0e9dgj@jarsora.id",
+          "password": "Masuk123"
+        },
+        "8": {
+          "email": "dmti4lvd70@jarsora.id",
+          "password": "Masuk123"
+        },
+        "9": {
+          "email": "ceacalncd2@jarsora.id",
+          "password": "Masuk123"
+        },
+        "10": {
+          "email": "ds6tahxh9r@jarsora.id",
+          "password": "Masuk123"
+        },
+        "11": {
+          "email": "rd9srd472t@jarsora.id",
+          "password": "Masuk123"
+        },
+        "12": {
+          "email": "73dkkkc9od@jarsora.id",
+          "password": "Masuk123"
+        },
+        "13": {
+          "email": "hk8ksgwkvs@jarsora.id",
+          "password": "Masuk123"
+        },
+        "14": {
+          "email": "pptizwujhp@jarsora.id",
+          "password": "Masuk123"
+        }
+      }
+    }
+  }
+}
