@@ -12,7 +12,7 @@
     <header class="topbar">
       <a class="brand" href="index.html">
         <span class="logo">JS</span>
-        <span><b>JuaStore</b><small>Admin Giveaway</small></span>
+        <span><b>JuaStore</b><small>Professional Giveaway Panel</small></span>
       </a>
       <button id="logoutBtn" class="admin-link hidden" type="button">Logout</button>
     </header>
@@ -33,11 +33,21 @@
         <div><small>Total Kode</small><b id="totalCount">0</b></div>
         <div><small>Ready</small><b id="readyCount">0</b></div>
         <div><small>Redeemed</small><b id="redeemedCount">0</b></div>
+        <div><small>Terjadwal/Expired</small><b id="scheduledCount">0</b></div>
+      </section>
+
+      <section class="quick-actions">
+        <button id="copyReadyCodesBtn" type="button">Salin Semua Kode Ready</button>
+        <button id="copyReadyLinksBtn" class="secondary" type="button">Salin Link + Kode</button>
+        <button id="exportExcelBtn" class="secondary" type="button">Export Excel</button>
+        <label class="upload-btn secondary">Import Excel
+          <input id="importExcelInput" type="file" accept=".xlsx,.xls,.csv" hidden>
+        </label>
       </section>
 
       <section class="panel">
         <div class="section-title">
-          <div><span class="eyebrow">BUAT GIVEAWAY</span><h2 id="formTitle">Tambah Akun Giveaway</h2></div>
+          <div><span class="eyebrow">BUAT GIVEAWAY</span><h2 id="formTitle">Tambah Satu Akun</h2></div>
           <button id="resetBtn" class="secondary" type="button">Reset</button>
         </div>
 
@@ -53,7 +63,15 @@
               <button id="generateCodeBtn" class="secondary" type="button">Generate</button>
             </div>
           </label>
-          <label class="full">Catatan Login<textarea id="accountNotes" rows="4" placeholder="Petunjuk login dan catatan lainnya."></textarea></label>
+          <label>Aktif Mulai
+            <span class="date-wrap"><input id="activeFrom" type="datetime-local"></span>
+          </label>
+          <label>Kedaluwarsa
+            <span class="date-wrap"><input id="expiresAt" type="datetime-local"></span>
+          </label>
+          <label class="check-row"><input id="mysteryMode" type="checkbox"> Sembunyikan nama produk saat kode dibagikan</label>
+          <label class="check-row"><input id="limitOneDevice" type="checkbox" checked> Batasi satu redeem per browser/perangkat</label>
+          <label class="full">Catatan Login<textarea id="accountNotes" rows="4" placeholder="Petunjuk login dan catatan akun."></textarea></label>
         </div>
 
         <button id="saveBtn" type="button">Simpan Giveaway</button>
@@ -62,8 +80,34 @@
 
       <section class="panel">
         <div class="section-title">
+          <div><span class="eyebrow">BULK GENERATOR</span><h2>Buat Banyak Akun Sekaligus</h2></div>
+        </div>
+        <p class="helper">Satu baris satu akun. Format: Produk | Email | Password | PIN | Durasi | Catatan</p>
+        <textarea id="bulkData" rows="8" placeholder="VIU Premium|akun1@gmail.com|pass123|1|Lifetime|Jangan ubah data akun&#10;Canva Pro|akun2@gmail.com|pass456|-|1 Bulan|Login dengan email"></textarea>
+        <div class="bulk-options">
+          <label>Aktif Mulai<span class="date-wrap"><input id="bulkActiveFrom" type="datetime-local"></span></label>
+          <label>Kedaluwarsa<span class="date-wrap"><input id="bulkExpiresAt" type="datetime-local"></span></label>
+          <label class="check-row"><input id="bulkMysteryMode" type="checkbox"> Mode misteri</label>
+          <label class="check-row"><input id="bulkLimitDevice" type="checkbox" checked> Batas perangkat</label>
+        </div>
+        <button id="bulkCreateBtn" type="button">Generate Semua Kode</button>
+        <div id="bulkMessage" class="message hidden"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title list-head">
           <div><span class="eyebrow">DATA GIVEAWAY</span><h2>Daftar Akun</h2></div>
-          <input id="adminSearch" class="search-small" placeholder="Cari kode atau produk">
+          <div class="filters">
+            <input id="adminSearch" class="search-small" placeholder="Cari kode, produk, atau akun">
+            <select id="statusFilter">
+              <option value="all">Semua Status</option>
+              <option value="ready">Ready</option>
+              <option value="redeemed">Redeemed</option>
+              <option value="disabled">Disabled</option>
+              <option value="scheduled">Terjadwal</option>
+              <option value="expired">Expired</option>
+            </select>
+          </div>
         </div>
         <div id="giveawayList" class="giveaway-list"></div>
       </section>
@@ -73,6 +117,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   <script src="firebase-config.js"></script>
   <script src="admin.js"></script>
 </body>

@@ -14,13 +14,12 @@
         <span class="logo">JS</span>
         <span><b>JuaStore</b><small>Premium Apps & Top Up Game</small></span>
       </a>
-      <a class="admin-link" href="admin.html">Admin</a>
     </header>
 
     <section class="hero">
       <span class="eyebrow">JUASTORE GIVEAWAY</span>
       <h1>Redeem Hadiah Giveaway</h1>
-      <p>Masukkan kode giveaway untuk membuka detail akun hadiahmu.</p>
+      <p>Masukkan kode giveaway dan temukan hadiahmu.</p>
     </section>
 
     <section class="panel redeem-panel">
@@ -29,7 +28,7 @@
         <input id="giveawayCode" autocomplete="off" placeholder="Contoh: JS-GW-8K4P7X">
         <button id="redeemBtn" type="button">Redeem Sekarang</button>
       </div>
-      <p class="helper">Satu akun hanya memiliki satu kode giveaway dan kode hanya dapat diredeem satu kali.</p>
+      <p class="helper">Setiap kode hanya berlaku satu kali. Kode terjadwal hanya bisa digunakan setelah waktu aktif.</p>
       <div id="message" class="message hidden" aria-live="polite"></div>
     </section>
 
@@ -42,7 +41,6 @@
             <h2 id="resultProduct">-</h2>
           </div>
         </div>
-
         <div class="detail-grid">
           <div><small>Produk</small><b id="resultProduct2">-</b></div>
           <div><small>Durasi</small><b id="resultDuration">-</b></div>
@@ -51,17 +49,9 @@
           <div><small>PIN / Profil</small><b id="resultPin">-</b></div>
           <div><small>Kode Giveaway</small><b id="resultCode">-</b></div>
         </div>
-
-        <div class="notes">
-          <small>Catatan Login</small>
-          <p id="resultNotes">-</p>
-        </div>
-
-        <div class="warning">
-          ⚠️ Segera salin atau simpan detail akun dalam bentuk foto. Setelah halaman ditutup, detail tidak dapat dibuka kembali melalui tombol redeem.
-        </div>
+        <div class="notes"><small>Catatan Login</small><p id="resultNotes">-</p></div>
+        <div class="warning">⚠️ Segera salin atau simpan detail akun dalam bentuk foto. Setelah halaman ditutup, kode tidak dapat diredeem kembali.</div>
       </article>
-
       <div class="action-grid">
         <button id="copyBtn" class="secondary" type="button">Salin Detail Akun</button>
         <button id="saveImageBtn" class="secondary" type="button">Simpan sebagai Foto</button>
@@ -79,11 +69,7 @@
         </a>
       </div>
     </section>
-
-    <footer>
-      <b>JuaStore</b>
-      <span>Premium Apps & Top Up Game</span>
-    </footer>
+    <footer><b>JuaStore</b><span>Premium Apps & Top Up Game</span></footer>
   </main>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>

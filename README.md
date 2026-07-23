@@ -23,3 +23,18 @@ Website giveaway berbasis Firebase Firestore dan GitHub Pages.
 
 ## Catatan keamanan
 Versi tanpa server ini menggunakan transaksi Firestore sehingga redeem kedua ditolak oleh tampilan website. Untuk sistem satu kali yang benar-benar aman terhadap pengguna teknis, gunakan Cloud Functions/API server agar detail akun tidak pernah dapat dibaca setelah status redeemed.
+
+
+## Fitur V3 Professional
+- Bulk generator hingga 400 akun sekali proses.
+- Salin semua kode Ready.
+- Salin link redeem langsung per kode.
+- Mode hadiah misteri.
+- Jadwal aktif dan waktu kedaluwarsa.
+- Pembatasan satu redeem per browser/perangkat.
+- Dashboard status lengkap.
+- Filter dan pencarian.
+- Import dan export Excel.
+- Edit, nonaktifkan, dan hapus akun.
+
+Catatan: pembatasan perangkat memakai localStorage browser, bukan IP. Pengguna yang menghapus data browser dapat melewati pembatasan. Batas IP yang kuat memerlukan backend/Cloud Functions.
