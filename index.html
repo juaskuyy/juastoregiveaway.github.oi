@@ -1,74 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>🐨 JuaStore Giveaway</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111318">
+  <title>Redeem Giveaway — JuaStore</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="logo">JS</span>
+        <span><b>JuaStore</b><small>Premium Apps & Top Up Game</small></span>
+      </a>
+      <a class="admin-link" href="admin.html">Admin</a>
+    </header>
 
-<div class="header">
+    <section class="hero">
+      <span class="eyebrow">JUASTORE GIVEAWAY</span>
+      <h1>Redeem Hadiah Giveaway</h1>
+      <p>Masukkan kode giveaway untuk membuka detail akun hadiahmu.</p>
+    </section>
 
-<div class="logo">
-🐨
-</div>
+    <section class="panel redeem-panel">
+      <label for="giveawayCode">Kode Giveaway</label>
+      <div class="search-row">
+        <input id="giveawayCode" autocomplete="off" placeholder="Contoh: JS-GW-8K4P7X">
+        <button id="redeemBtn" type="button">Redeem Sekarang</button>
+      </div>
+      <p class="helper">Satu akun hanya memiliki satu kode giveaway dan kode hanya dapat diredeem satu kali.</p>
+      <div id="message" class="message hidden" aria-live="polite"></div>
+    </section>
 
-<h1>
-JUASTORE GIVEAWAY
-</h1>
+    <section id="resultSection" class="hidden">
+      <article id="accountCard" class="account-card">
+        <div class="account-head">
+          <span class="success-icon">✓</span>
+          <div>
+            <small>GIVEAWAY BERHASIL DIREDEEM</small>
+            <h2 id="resultProduct">-</h2>
+          </div>
+        </div>
 
-<p>
-🎁 Claim Premium Account Gratis Setiap Hari
-</p>
+        <div class="detail-grid">
+          <div><small>Produk</small><b id="resultProduct2">-</b></div>
+          <div><small>Durasi</small><b id="resultDuration">-</b></div>
+          <div><small>Email / Username</small><b id="resultEmail">-</b></div>
+          <div><small>Password</small><b id="resultPassword">-</b></div>
+          <div><small>PIN / Profil</small><b id="resultPin">-</b></div>
+          <div><small>Kode Giveaway</small><b id="resultCode">-</b></div>
+        </div>
 
-</div>
+        <div class="notes">
+          <small>Catatan Login</small>
+          <p id="resultNotes">-</p>
+        </div>
 
+        <div class="warning">
+          ⚠️ Segera salin atau simpan detail akun dalam bentuk foto. Setelah halaman ditutup, detail tidak dapat dibuka kembali melalui tombol redeem.
+        </div>
+      </article>
 
-<div class="info-box">
+      <div class="action-grid">
+        <button id="copyBtn" class="secondary" type="button">Salin Detail Akun</button>
+        <button id="saveImageBtn" class="secondary" type="button">Simpan sebagai Foto</button>
+      </div>
+    </section>
 
-🔥 Total Produk:
-<span id="totalProduk">
-Loading...
-</span>
+    <section class="community">
+      <h2>Komunitas Resmi JuaStore</h2>
+      <div class="community-grid">
+        <a href="https://t.me/juastorepremium_bot" target="_blank" rel="noopener">
+          <span>🤖</span><div><b>Bot Telegram JuaStore</b><small>Auto order aplikasi premium</small></div><i>→</i>
+        </a>
+        <a href="https://chat.whatsapp.com/HSQcXPrUVSlBMMjtqWcCDG?s=cl&p=a&ilr=0&amv=2" target="_blank" rel="noopener">
+          <span>💬</span><div><b>Grup WhatsApp JuaStore</b><small>Info stok, promo, dan reseller</small></div><i>→</i>
+        </a>
+      </div>
+    </section>
 
-</div>
+    <footer>
+      <b>JuaStore</b>
+      <span>Premium Apps & Top Up Game</span>
+    </footer>
+  </main>
 
-
-<div id="produk">
-
-<!-- Produk dari Firebase akan muncul di sini -->
-
-</div>
-
-
-<div id="popup" class="popup">
-
-<div class="popup-box">
-
-<h2>
-🎉 CLAIM BERHASIL
-</h2>
-
-<div id="detailAkun">
-
-</div>
-
-<button onclick="tutupPopup()">
-Tutup
-</button>
-
-</div>
-
-</div>
-
-
-<script type="module" src="script.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="giveaway.js"></script>
 </body>
-
 </html>

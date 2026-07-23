@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111318">
+  <title>Admin Giveaway — JuaStore</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main class="wrap admin-wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="logo">JS</span>
+        <span><b>JuaStore</b><small>Admin Giveaway</small></span>
+      </a>
+      <button id="logoutBtn" class="admin-link hidden" type="button">Logout</button>
+    </header>
+
+    <section id="loginSection" class="panel narrow">
+      <span class="eyebrow">ADMIN ACCESS</span>
+      <h1>Login Admin</h1>
+      <label for="loginEmail">Email</label>
+      <input id="loginEmail" type="email" autocomplete="username" placeholder="admin@email.com">
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+      <button id="loginBtn" type="button">Login</button>
+      <div id="loginMessage" class="message hidden"></div>
+    </section>
+
+    <section id="adminSection" class="hidden">
+      <section class="stats">
+        <div><small>Total Kode</small><b id="totalCount">0</b></div>
+        <div><small>Ready</small><b id="readyCount">0</b></div>
+        <div><small>Redeemed</small><b id="redeemedCount">0</b></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <div><span class="eyebrow">BUAT GIVEAWAY</span><h2 id="formTitle">Tambah Akun Giveaway</h2></div>
+          <button id="resetBtn" class="secondary" type="button">Reset</button>
+        </div>
+
+        <div class="form-grid">
+          <label>Nama Produk<input id="product" placeholder="Contoh: VIU Premium"></label>
+          <label>Durasi<input id="duration" placeholder="Contoh: Lifetime / 1 Bulan"></label>
+          <label>Email / Username<input id="accountEmail" placeholder="Email atau username akun"></label>
+          <label>Password<input id="accountPassword" placeholder="Password akun"></label>
+          <label>PIN / Profil<input id="accountPin" placeholder="Opsional"></label>
+          <label>Kode Giveaway
+            <div class="inline-input">
+              <input id="giveawayCodeAdmin" readonly>
+              <button id="generateCodeBtn" class="secondary" type="button">Generate</button>
+            </div>
+          </label>
+          <label class="full">Catatan Login<textarea id="accountNotes" rows="4" placeholder="Petunjuk login dan catatan lainnya."></textarea></label>
+        </div>
+
+        <button id="saveBtn" type="button">Simpan Giveaway</button>
+        <div id="formMessage" class="message hidden"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <div><span class="eyebrow">DATA GIVEAWAY</span><h2>Daftar Akun</h2></div>
+          <input id="adminSearch" class="search-small" placeholder="Cari kode atau produk">
+        </div>
+        <div id="giveawayList" class="giveaway-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
